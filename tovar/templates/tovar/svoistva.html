@@ -1,0 +1,29 @@
+<html>
+  <head><title>{% block title %}Наш магазин{% endblock %}</title></head>
+  <body>
+  
+  
+  <!-- Main menu  -->
+  <table>
+    <tr>
+      <td><a href="{% url 'home:index'  %}"> Начало</td>
+      <td><a href="{% url 'tovar:index' %}">Товары</td>
+      <td><a href="{% url 'tovar:allgroups' %}">Группы</a></td>
+    </tr>
+  </table>
+  <!-- End of main menu -->
+  
+  <!-- Main title -->
+  <H1>{% block header %}Наш крутой магазин{% endblock %}</H1>
+  <!-- End of main title -->
+  
+  <div id="contents">
+  <!-- Contents -->
+  {% block contents %}
+  <p>Добро пожаловать!!!!!</p>
+  {% endblock %}
+  <!-- End of contents -->
+  </div>
+  
+  </body>  
+</html>
